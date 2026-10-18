@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import ProjectMedia from '../../components/ProjectMedia.astro';
+import { content } from '../../lib/content';
+import type { Project } from '../../lib/schema';
+import { withBase } from '../../lib/urls';
+
+export function getStaticPaths() {
+  return content.projects
+    .filter((project) => !project.externalOnly)
+    .map((project) => ({ params: { projectId: project.id }, props: { project } }));
+}
+interface Props { project: Project; }
+const { project } = Astro.props;
+---
+<Layout title={project.seo.title || `${project.title} — ${content.site.name}`} description={project.seo.description || project.description} socialImage={project.cover.src || content.site.socialImage} active="work">
+  <article class="project-detail">
+    <div class="project-intro panel">
+      <a class="back-link" href={withBase('works/')}><Icon name="back" size={17} />{content.site.labels.backToWork}</a>
+      <h1>{project.title}</h1>
+      <p class="detail-description">{project.description}</p>
+    </div>
+    <ProjectMedia project={project} />
+    <div class="project-writeup panel">
+      {project.content.map((section) => <section class="writeup-section"><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</section>)}
+      {project.visitUrl && <a class="visit-link" href={project.visitUrl} target="_blank" rel="noopener noreferrer">{content.site.labels.visitProject}<Icon name="arrow" size={18} /></a>}
+    </div>
+  </article>
+</Layout>

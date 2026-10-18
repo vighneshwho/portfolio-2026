@@ -1,0 +1,193 @@
+{
+  "site": {
+    "name": "Vighnesh",
+    "url": "https://example.com",
+    "title": "Vighnesh — A little corner of the internet",
+    "description": "A selection of projects, ideas, and things made by Vighnesh.",
+    "socialImage": "",
+    "navigation": { "info": "Info", "work": "Work", "contact": "Contact" },
+    "labels": {
+      "home": "Back to home",
+      "backToWork": "Back to work",
+      "visitProject": "Visit project",
+      "projectPlaceholder": "Project image",
+      "notFoundTitle": "A little off the beaten path.",
+      "notFoundDescription": "This page doesn’t exist. Let’s get you back to the good stuff."
+    }
+  },
+  "home": {
+    "showreel": {
+      "video": "https://www.youtube.com/watch?v=uVKKV664CDU",
+      "poster": "",
+      "captions": "",
+      "label": "A little of what I do",
+      "placeholder": "Your showreel goes here"
+    },
+    "heading": "Hi, I'm Vighnesh.",
+    "blurb": "Product engineer with a keen eye for design. Based in Bangalore, India.",
+    "companiesLabel": "Companies"
+  },
+  "works": {
+    "heading": "My projects",
+    "description": "A selection of projects, ideas, and things made by Vighnesh."
+  },
+  "companies": [
+    { "name": "Kochi", "logo": "https://media.kochi.company/kochi-co.png", "url": "https://kochi.company" },
+    { "name": "Buy Me a Coffee", "logo": "https://media.kochi.company/bmc.png", "url": "https://buymeacoffee.com" },
+    { "name": "Voicenotes", "logo": "https://media.kochi.company/voicenotes.png", "url": "https://voicenotes.com" },
+    { "name": "BioLink", "logo": "https://media.kochi.company/bio-link.png", "url": "https://bio.link" },
+    { "name": "StoryBrain", "logo": "https://media.kochi.company/sb-large.png", "url": "https://storybrain.com" }
+  ],
+  "projects": [
+    {
+      "id": "openlyy",
+      "title": "Openlyy",
+      "description": "An AI-powered business page that answers customer questions, collects enquiries, and keeps conversations in one inbox.",
+      "cover": { "src": "https://media.kochi.company/openly-cover.jpeg", "alt": "Openlyy project preview", "width": 960, "height": 720 },
+      "visitUrl": "https://openlyy.me",
+      "externalOnly": true,
+      "seo": { "title": "Openlyy — Vighnesh", "description": "An AI business page for customer questions, enquiries, and conversations. A project by Vighnesh and Karthik." },
+      "media": { "video": "", "poster": "", "captions": "", "images": [] },
+      "content": [
+        {
+          "heading": "More time for the work you love.",
+          "paragraphs": ["I built Openlyy with my brother, Karthik, after seeing how hard it was for our mother and other local business owners to keep up with customer messages while running their businesses."]
+        },
+        {
+          "heading": "Your business, in a conversation.",
+          "paragraphs": ["Business owners add their products, services, documents, and FAQs, then share a page where customers can ask questions. The assistant uses that business information to answer, without requiring the owner to build a website or write code."]
+        },
+        {
+          "heading": "From questions to enquiries.",
+          "paragraphs": ["Customers can leave contact details in the chat. Their enquiry arrives with the conversation context in the business inbox, ready for a personal follow-up. The page can be shared in a bio, a message, or an away reply."]
+        }
+      ]
+    },
+    {
+      "id": "box-replay",
+      "title": "Box Replay",
+      "description": "A Mac screensaver that brings Formula 1 race data to your idle screen. Pick a race or let it choose one for you.",
+      "cover": { "src": "https://media.kochi.company/box-replay-display.png", "alt": "Box Replay project preview", "width": 960, "height": 720 },
+      "visitUrl": "https://box-replay.kochi.company",
+      "externalOnly": true,
+      "seo": { "title": "Box Replay — Vighnesh", "description": "An F1 race-data screensaver for Apple Silicon Macs, with race selection, random replay, and screen burn-in protection." },
+      "media": { "video": "", "poster": "", "captions": "", "images": [] },
+      "content": [
+        {
+          "heading": "A little more Formula 1.",
+          "paragraphs": ["Box Replay turns a Mac’s idle screen into a replay of Formula 1 race data. It draws on races from previous seasons, giving the screensaver something more personal than a static backdrop."]
+        },
+        {
+          "heading": "Choose a race. Or leave it to chance.",
+          "paragraphs": ["Select the race you want to see, or let the screensaver pick one at random. Built-in burn-in protection is part of the screensaver experience."]
+        },
+        {
+          "heading": "Made for the Mac.",
+          "paragraphs": ["The installer is designed for Apple Silicon Macs running macOS 13 Ventura or later. It is distributed as a one-time purchase through the project’s product page."]
+        }
+      ]
+    },
+        {
+      "id": "wake-me-after",
+      "title": "Wake Me After",
+      "description": "Choose how long you want to sleep and set your alarms in one tap. A sleep-duration alarm app for iPhone, with backup alarms and Liquid Glass.",
+      "cover": { "src": "https://media.kochi.company/wakemeafter.png", "alt": "Wake Me After project preview", "width": 960, "height": 720 },
+      "visitUrl": "https://x.com/vighneshwho/status/1972903408068923704",
+      "externalOnly": false,
+      "seo": { "title": "Wake Me After — Vighnesh", "description": "An iPhone sleep timer that calculates your wake-up time and schedules alarms from your chosen sleep duration." },
+      "media": { "video": "", "poster": "", "captions": "", "images": [
+        { "src": "https://media.kochi.company/wma-cover.jpeg", "alt": "Wake Me After app overview", "width": 1920, "height": 1080 }
+      ] },
+      "content": [
+        {
+          "heading": "Think in hours of sleep.",
+          "paragraphs": ["Wake Me After starts with how long you want to rest. Choose a duration for a quick nap or a full night’s sleep, and the app works out the wake-up time for you."]
+        },
+        {
+          "heading": "One tap before bed.",
+          "paragraphs": ["Setting an alarm also supports additional buffer or backup alarms, with up to ten available. The flow keeps the focus on choosing a duration and scheduling the alarms without doing the time calculation yourself."]
+        },
+        {
+          "heading": "Built for iOS 26.",
+          "paragraphs": ["The app launched on the App Store in September 2025 with an interface that uses Liquid Glass. It is designed for iPhone and requires iOS 26 or later."]
+        }
+      ]
+    },
+    {
+      "id": "swiggy-wrapped",
+      "title": "Swiggy Wrapped",
+      "description": "Your Swiggy order history, turned into a personalised Wrapped video. Preview it, save the video, and download snapshots, all in your browser.",
+      "cover": { "src": "https://media.kochi.company/wrapped.png", "alt": "Swiggy Wrapped project preview", "width": 960, "height": 720 },
+      "visitUrl": "https://chromewebstore.google.com/detail/spotify-wrapped-for-swigg/dbjjallfkoobcdpnfiocclejhgahcgfa",
+      "externalOnly": true,
+      "seo": { "title": "Swiggy Wrapped — Vighnesh", "description": "A Chrome extension that turns Swiggy order history into a personalised video and downloadable snapshots, processed in the browser." },
+      "media": { "video": "", "poster": "", "captions": "", "images": [] },
+      "content": [
+        {
+          "heading": "A different kind of Wrapped.",
+          "paragraphs": ["Swiggy Wrapped takes the familiar annual recap idea and applies it to food orders. The extension turns a person’s Swiggy order history into a personalised video."]
+        },
+        {
+          "heading": "Watch it. Keep it.",
+          "paragraphs": ["Preview the result with ten-second forward and backward seeking, then download the finished video or individual snapshots."]
+        },
+        {
+          "heading": "Everything stays in the browser.",
+          "paragraphs": ["The project runs without a backend server, keeping the order data inside the browser during processing. It is an independent extension and is not affiliated with Swiggy."]
+        }
+      ]
+    },
+    {
+      "id": "clones",
+      "title": "Clones",
+      "description": "A collection of interface recreations built with HTML and vanilla CSS, exploring layouts from music players and dashboards to messaging apps.",
+      "cover": { "src": "https://media.kochi.company/clones-square.png", "alt": "Clones interface collection preview", "width": 960, "height": 720 },
+      "visitUrl": "https://github.com/vighneshwho/clones",
+      "externalOnly": true,
+      "seo": { "title": "Clones — Vighnesh", "description": "Interface recreations and frontend exercises built with pure HTML and CSS, with design references, source code, and live demos." },
+      "media": { "video": "", "poster": "", "captions": "", "images": [] },
+      "content": [
+        {
+          "heading": "Learning by rebuilding.",
+          "paragraphs": ["Clones began as a way to understand CSS more deeply by recreating interfaces from Dribbble. I kept the exercises in vanilla CSS, without a framework, to work through the layout and styling decisions myself."]
+        },
+        {
+          "heading": "Many interfaces. One foundation.",
+          "paragraphs": ["The collection includes music players, banking and analytics dashboards, email clients, messaging interfaces, and social app concepts. Each exercise explores a different combination of spacing, hierarchy, and layout."]
+        },
+        {
+          "heading": "The references and the results.",
+          "paragraphs": ["The repository brings the source code together with the original design references and live demos, arranged by creation date. It also credits Jikku Jose for mentoring me through the exercises."]
+        }
+      ]
+    },
+    {
+      "id": "count-my-shorts",
+      "title": "Count My Shorts",
+      "description": "A small counter for YouTube Shorts, with usage reminders and a spacebar challenge that adds a pause to endless scrolling.",
+      "cover": { "src": "https://media.kochi.company/count-my-shorts.png", "alt": "Count My Shorts project preview", "width": 960, "height": 720 },
+      "visitUrl": "https://x.com/vighneshwho/status/2025824640430649631?s=20",
+      "externalOnly": true,
+      "seo": { "title": "Count My Shorts — Vighnesh", "description": "A Chrome extension that counts YouTube Shorts, reminds you to take a break, and adds a configurable spacebar challenge." },
+      "media": { "video": "", "poster": "", "captions": "", "images": [] },
+      "content": [
+        {
+          "heading": "Make the scrolling visible.",
+          "paragraphs": ["Count My Shorts started as a way to interrupt my own YouTube Shorts doomscrolling. A small capsule keeps the number of shorts watched in view, making it harder to lose track of the session."]
+        },
+        {
+          "heading": "A reminder with a little friction.",
+          "paragraphs": ["Usage reminders appear at an interval you choose. To continue, the extension can ask you to press the spacebar as many times as the number of shorts you have watched: 100 shorts, 100 presses."]
+        },
+        {
+          "heading": "Set it to suit you.",
+          "paragraphs": ["The behaviour is configurable in the settings. The idea is to add a moment of awareness before the next scroll, rather than making every session feel the same."]
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "handle": "@vighneshwo",
+    "email": "vighneshwho@gmail.com"
+  }
+}

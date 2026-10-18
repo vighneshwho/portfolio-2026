@@ -1,0 +1,20 @@
+---
+import { content } from '../lib/content';
+import { withBase } from '../lib/urls';
+import Icon from './Icon.astro';
+interface Props { active?: 'info' | 'work'; }
+const { active = 'info' } = Astro.props;
+const { site } = content;
+---
+<header class="site-header panel">
+  
+  <nav aria-label="Main navigation">
+    <a class:list={['nav-pill', { 'is-active': active === 'info' }]} href={`${withBase()}#info`}>
+      <span>{site.navigation.info}</span><Icon name={active === 'info' ? 'minus' : 'plus'} size={23} />
+    </a>
+    <a class:list={['nav-pill', { 'is-active': active === 'work' }]} href={withBase('works/')}>
+      <span>{site.navigation.work}</span><Icon name={active === 'work' ? 'minus' : 'plus'} size={23} />
+    </a>
+    <a class="nav-pill" href={`${withBase()}#contact`}><span>{site.navigation.contact}</span><Icon name="plus" size={23} /></a>
+  </nav>
+</header>

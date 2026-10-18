@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { content } from '../lib/content';
+import { assetUrl, withBase } from '../lib/urls';
+const { works, projects, site } = content;
+---
+<Layout title={`${works.heading} — ${site.name}`} description={works.description} active="work">
+  <section class="work-section" aria-labelledby="work-heading">
+    <div class="section-heading"><h1 id="work-heading">{works.heading}</h1><span class="project-count">{String(projects.length).padStart(2, '0')}</span></div>
+    <div class="projects-panel panel">{projects.map((project) => <a
+      class="project-card"
+      href={project.externalOnly ? project.visitUrl : withBase(`work/${project.id}/`)}
+      target={project.externalOnly ? '_blank' : undefined}
+      rel={project.externalOnly ? 'noopener noreferrer' : undefined}
+      aria-label={`${project.title} — ${project.externalOnly ? site.labels.visitProject : site.navigation.work}`}
+    >
+      <div class="project-cover media-placeholder">
+        {project.cover.src ? <img src={assetUrl(project.cover.src)} alt={project.cover.alt} width={project.cover.width} height={project.cover.height} loading="lazy" decoding="async" /> : <span class="image-placeholder-label">{site.labels.projectPlaceholder}</span>}
+      </div>
+      <div class="project-card-content">
+        <div class="project-card-top"><h2>{project.title}</h2><Icon name="arrow" size={20} /></div>
+        <p class="project-description">{project.description}</p>
+      </div>
+    </a>)}</div>
+  </section>
+</Layout>

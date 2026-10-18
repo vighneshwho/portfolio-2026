@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { content } from '../lib/content';
+import { withBase } from '../lib/urls';
+---
+<Layout title={`Page not found — ${content.site.name}`} noindex>
+  <section class="not-found panel"><p class="eyebrow">404</p><h1>{content.site.labels.notFoundTitle}</h1><p>{content.site.labels.notFoundDescription}</p><a class="visit-link" href={withBase()}>{content.site.labels.home}<Icon name="arrow-right" size={18} /></a></section>
+</Layout>

@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import { content } from '../lib/content';
+import { assetUrl, withBase } from '../lib/urls';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+interface Props { title?: string; description?: string; socialImage?: string; active?: 'info' | 'work'; noindex?: boolean; }
+const { title = content.site.title, description = content.site.description, socialImage = content.site.socialImage, active = 'info', noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const image = socialImage ? new URL(assetUrl(socialImage), Astro.site).href : undefined;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ececea" />
+    <meta name="description" content={description} />
+    <meta name="author" content={content.site.name} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={withBase('favicon.svg')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={content.site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {image && <meta property="og:image" content={image} />}
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {image && <meta name="twitter:image" content={image} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <Header active={active} />
+      <main id="main"><slot /></main>
+      <Footer />
+    </div>
+  </body>
+</html>

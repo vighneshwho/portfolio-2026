@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: 'arrow' | 'arrow-right' | 'back' | 'plus' | 'minus' | 'play' | 'coffee' | 'waveform' | 'link' | 'spark';
+  size?: number;
+  class?: string;
+}
+const { name, size = 20, class: className } = Astro.props;
+---
+<svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  {name === 'arrow' && <><path d="M6 18 18 6M6 6h12v12" /></>}
+  {name === 'arrow-right' && <><path d="M4 12h15m-6-6 6 6-6 6" /></>}
+  {name === 'back' && <><path d="M20 12H5m6-6-6 6 6 6" /></>}
+  {name === 'plus' && <><circle cx="12" cy="12" r="9" /><path d="M12 7v10M7 12h10" /></>}
+  {name === 'minus' && <><circle cx="12" cy="12" r="9" /><path d="M7 12h10" /></>}
+  {name === 'play' && <path d="m9 5 10 7-10 7V5Z" fill="currentColor" stroke="none" />}
+  {name === 'coffee' && <><path d="M5 7h13l-1.5 13h-10L5 7ZM4 4h15M7 1h9M5.5 11h12" /><path d="m18 9 2 .2a3 3 0 0 1-.4 5.8h-2.4" /></>}
+  {name === 'waveform' && <><path d="M3 10v4M7 6v12M11 2v20M15 7v10M19 5v14M23 10v4" stroke-width="2.8" /></>}
+  {name === 'link' && <><path d="m9 15 6-6M8 16l-1 1a3.5 3.5 0 0 1-5-5l5-5a3.5 3.5 0 0 1 5 0m0 10a3.5 3.5 0 0 0 5 0l5-5a3.5 3.5 0 0 0-5-5l-1 1" stroke-width="2.4" /></>}
+  {name === 'spark' && <><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5" stroke-width="2.6" /><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none" /></>}
+</svg>

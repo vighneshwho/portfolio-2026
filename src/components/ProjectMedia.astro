@@ -1,0 +1,25 @@
+---
+import type { Project } from '../lib/schema';
+import { selectProjectMedia } from '../lib/schema';
+import { assetUrl } from '../lib/urls';
+interface Props { project: Project; }
+const { project } = Astro.props;
+const media = selectProjectMedia(project.media);
+---
+{media?.type === 'video' && <section class="detail-media" aria-label={`${project.title} video`}>
+  <div class="detail-video-frame">
+    <video controls playsinline preload="none" poster={media.poster ? assetUrl(media.poster) : undefined} aria-label={project.title}>
+      <source src={assetUrl(media.video)} />
+      {media.captions && <track kind="captions" src={assetUrl(media.captions)} srclang="en" label="English" default />}
+      <a href={assetUrl(media.video)}>Watch the project video</a>
+    </video>
+  </div>
+</section>}
+{media?.type === 'images' && <section class="detail-media" aria-label={`${project.title} images`}>
+  {media.images.map((image, index) => <figure>
+    <div class="detail-image-frame" style={`aspect-ratio: ${image.width} / ${image.height}`}>
+      <img src={assetUrl(image.src)} alt={image.alt} width={image.width} height={image.height} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+    </div>
+    {image.caption && <figcaption>{image.caption}</figcaption>}
+  </figure>)}
+</section>}

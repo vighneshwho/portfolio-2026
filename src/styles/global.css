@@ -1,0 +1,131 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #20211f;
+  background: #ececea;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --paper: #fff;
+  --ink: #20211f;
+  --muted: #686b62;
+  --accent: #f49ae5;
+  --radius: 30px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body { margin: 0; }
+a { color: inherit; }
+button, input, textarea { font: inherit; }
+img, video { display: block; max-width: 100%; }
+svg { flex-shrink: 0; }
+h1, h2, h3, p, figure, ul, dl, dd { margin: 0; }
+a { text-decoration: none; }
+::selection { background: var(--accent); color: var(--ink); }
+:focus-visible { outline: 2px solid #79256d; outline-offset: 5px; }
+.site-shell { width: min(720px, calc(100% - 40px)); margin: 48px auto 40px; }
+.panel { background: var(--paper); border-radius: var(--radius); }
+.site-header { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 10px 8px 24px; margin-bottom: 10px; }
+.wordmark { display: grid; place-items: center; padding: 4px; }
+.site-header nav { display: flex; gap: 6px; }
+.nav-pill { display: flex; align-items: center; gap: 12px; padding: 10px 13px 10px 16px; border-radius: 999px; background: #f3f3f1; font-size: 19px; line-height: 1; letter-spacing: -.5px; }
+.nav-pill:hover { background: #e8e8e5; }
+.nav-pill.is-active { background: var(--accent); }
+main > section, .project-detail > * { margin-bottom: 10px; }
+.showreel-panel { padding: 10px; }
+.showreel-frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border-radius: 22px; background: #d9d9d6; }
+.showreel-frame video, .showreel-poster { width: 100%; height: 100%; object-fit: cover; }
+.showreel-frame video { pointer-events: none; }
+.showreel-frame--embed { width: 100%; min-height: 200px; }
+.showreel-frame iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; pointer-events: none; }
+.media-placeholder { background: #dededb; }
+.showreel-placeholder-content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; color: #5d6057; font-size: 13px; }
+.play-mark { display: grid; place-items: center; width: 50px; height: 50px; border: 1px solid #bcbdb6; border-radius: 50%; color: #65665f; padding-left: 3px; }
+.showreel-caption { position: absolute; bottom: 19px; left: 22px; right: 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; color: #5d6057; }
+.intro-panel { padding: 28px 34px 36px; }
+.eyebrow { font-size: 10px; font-weight: 500; line-height: 1.4; letter-spacing: 1.6px; color: var(--muted); }
+.intro-panel h1 { max-width: 20ch; margin: 0 0 18px; font-size: clamp(32px, 6vw, 46px); font-weight: 400; line-height: 1.08; letter-spacing: -1.8px; text-wrap: balance; }
+.intro-blurb { max-width: 49ch; font-size: 19px; line-height: 1.48; letter-spacing: -.4px; color: #666861; }
+.companies-panel { padding: 25px 28px 27px; }
+.company-list { list-style: none; padding: 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.company-list li { flex: 0 0 auto; }
+.company { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+.company img { width: auto; height: clamp(12px, 3.6vw, 28px); object-fit: contain; }
+a.company:hover { opacity: .7; }
+.section-heading { display: flex; align-items: flex-end; justify-content: space-between; padding: 41px 7px 22px; }
+.section-heading h1 { font-weight: 400; font-size: 32px; line-height: 1.05; letter-spacing: -1.2px; }
+.project-count { padding-bottom: 2px; color: #62665c; font-size: 13px; font-variant-numeric: tabular-nums; }
+.projects-panel { padding: 9px; }
+.project-card { display: grid; grid-template-columns: 214px minmax(0, 1fr); gap: 25px; border-radius: 23px; padding: 15px; background: #f4f4f1; }
+.project-card + .project-card { margin-top: 8px; }
+.project-card:hover { background: #eeeee9; }
+.project-cover { position: relative; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 13px; display: grid; place-items: center; }
+.project-cover img { width: 100%; height: 100%; object-fit: cover; }
+.image-placeholder-label { color: #5d6057; font-size: 12px; }
+.project-card-content { padding: 7px 3px 6px 0; display: flex; flex-direction: column; min-width: 0; }
+.project-card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.project-card h2 { font-size: 25px; font-weight: 400; letter-spacing: -.8px; line-height: 1.15; }
+.project-description { color: #686b62; font-size: 15px; line-height: 1.5; letter-spacing: -.2px; margin-top: auto; padding-top: 22px; }
+.contact-panel { display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; min-height: 150px; padding: 30px 34px; margin-top: 10px; }
+.footer-handle, .footer-email { font-size: 16px; line-height: 1.4; color: #696b63; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #65675f; margin-bottom: 32px; }
+.back-link:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.project-intro { padding: 31px 34px 35px; }
+.project-intro h1 { font-size: clamp(39px, 7vw, 55px); line-height: 1.05; letter-spacing: -2px; font-weight: 400; }
+.detail-description { margin-top: 23px; font-size: 19px; line-height: 1.5; color: #6d6f66; max-width: 47ch; letter-spacing: -.3px; }
+.project-writeup { padding: 38px 34px 37px; }
+.writeup-section + .writeup-section { margin-top: 36px; }
+.writeup-section h2 { font-weight: 400; font-size: 26px; letter-spacing: -.8px; line-height: 1.2; margin-bottom: 18px; }
+.writeup-section p { font-size: 16px; color: #6c6f64; line-height: 1.7; letter-spacing: -.13px; }
+.writeup-section p + p { margin-top: 16px; }
+.visit-link { display: inline-flex; align-items: center; justify-content: center; gap: 30px; background: var(--ink); color: white; font-size: 14px; padding: 15px 19px; border-radius: 999px; margin-top: 32px; }
+.visit-link:hover { background: #45473e; }
+.detail-media { display: grid; gap: 10px; }
+.detail-video-frame, .detail-image-frame { border-radius: var(--radius); overflow: hidden; background: #dededb; }
+.detail-video-frame { aspect-ratio: 16 / 9; }
+.detail-media img, .detail-media video { width: 100%; height: 100%; object-fit: cover; }
+.detail-media figcaption { padding: 11px 15px 6px; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.not-found { padding: 55px 34px; }
+.not-found h1 { font-weight: 400; font-size: 45px; line-height: 1.05; letter-spacing: -1.6px; margin-top: 25px; max-width: 16ch; }
+.not-found > p:not(.eyebrow) { margin-top: 24px; color: var(--muted); line-height: 1.5; }
+.skip-link { position: absolute; top: -60px; left: 16px; background: var(--ink); color: white; padding: 12px 18px; border-radius: 20px; z-index: 2; }
+.skip-link:focus { top: 10px; }
+
+@media (max-width: 600px) {
+  :root { --radius: 25px; }
+  .site-shell { width: calc(100% - 24px); margin-top: 20px; margin-bottom: 24px; }
+  .site-header { padding-left: 16px; min-height: 62px; gap: 8px; }
+  .wordmark svg { width: 28px; height: 28px; }
+  .nav-pill { font-size: 16px; padding: 9px 10px 9px 12px; gap: 8px; }
+  .nav-pill svg { width: 20px; height: 20px; }
+  .site-header nav { gap: 4px; }
+  .showreel-frame { border-radius: 17px; }
+  .showreel-caption { bottom: 14px; left: 16px; right: 16px; font-size: 11px; }
+  .showreel-placeholder-content { font-size: 11px; gap: 9px; }
+  .play-mark { width: 40px; height: 40px; }
+  .intro-panel { padding: 28px 25px 31px; }
+  .intro-panel h1 { font-size: clamp(30px, 7.5vw, 42px); letter-spacing: -1.2px; }
+  .intro-blurb { font-size: 17px; line-height: 1.5; }
+  .companies-panel { padding: 23px 25px 25px; }
+  .company-list { gap: 12px; }
+  .section-heading { padding: 34px 8px 20px; }
+  .section-heading h1 { font-size: 29px; }
+  .project-card { grid-template-columns: 1fr; gap: 17px; padding: 12px; border-radius: 20px; }
+  .project-cover { aspect-ratio: 4 / 3; border-radius: 12px; }
+  .project-card-content { padding: 0 5px 9px; }
+  .project-card h2 { font-size: 26px; }
+  .project-description { margin-top: 14px; padding-top: 0; font-size: 15px; max-width: 40ch; }
+  .contact-panel { padding: 27px 25px; }
+  .project-intro { padding: 28px 25px 30px; }
+  .project-intro h1 { font-size: 42px; letter-spacing: -1.6px; }
+  .detail-description { font-size: 17px; }
+  .project-writeup { padding: 32px 25px; }
+  .writeup-section h2 { font-size: 25px; }
+  .writeup-section p { font-size: 16px; }
+}
+
+@media (max-width: 360px) {
+  .nav-pill { gap: 6px; padding: 9px; font-size: 14px; }
+  .nav-pill svg { width: 18px; height: 18px; }
+  .site-header { padding-left: 12px; }
+}

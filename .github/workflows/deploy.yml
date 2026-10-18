@@ -1,0 +1,44 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the source
+        uses: actions/checkout@v7
+      - name: Read GitHub Pages URL configuration
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Validate, test, and build Astro
+        uses: withastro/action@v6
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        with:
+          node-version: 24
+          build-cmd: npm run verify
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish the built site
+        id: deployment
+        uses: actions/deploy-pages@v5
