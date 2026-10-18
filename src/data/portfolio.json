@@ -94,7 +94,7 @@
       "cover": { "src": "https://media.kochi.company/wakemeafter.png", "alt": "Wake Me After project preview", "width": 960, "height": 720 },
       "visitUrl": "https://x.com/vighneshwho/status/1972903408068923704",
       "externalOnly": false,
-      "seo": { "title": "Wake Me After — Vighnesh", "description": "An iPhone sleep timer that calculates your wake-up time and schedules alarms from your chosen sleep duration." },
+      "seo": { "title": "Wake Me After", "description": "An iPhone sleep timer that calculates your wake-up time and schedules alarms from your chosen sleep duration." },
       "media": { "video": "", "poster": "", "captions": "", "images": [
         { "src": "https://media.kochi.company/wma-cover.jpeg", "alt": "Wake Me After app overview", "width": 1920, "height": 1080 }
       ] },
